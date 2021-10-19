@@ -19,7 +19,8 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return [];
+    const newArray = arr.map(item => item.name);
+    return newArray;
 }
 
 /*
