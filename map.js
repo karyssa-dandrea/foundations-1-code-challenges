@@ -34,10 +34,11 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    const newArray = arr.map(item => {
-        item.isHungry = true; 
-        return item;
-    });
+    const newArray = arr.map(item => ({
+        name:item.name, 
+        type:item.type,
+        isHungry:true
+    }));
     return newArray ;
 }
 
@@ -52,7 +53,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map(object => {
+        object.name = object.name.toUpperCase();
+        return object;
+    });
+
 }
 
 
