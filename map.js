@@ -34,7 +34,11 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    const newArray = arr.map(item => {
+        item.isHungry = true; 
+        return item;
+    });
+    return newArray ;
 }
 
 /*
