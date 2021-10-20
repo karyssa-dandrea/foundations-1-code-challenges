@@ -53,10 +53,13 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return arr.map(object => {
-        object.name = object.name.toUpperCase();
-        return object;
-    });
+    return arr.map(object => (
+        
+        {
+            name: object.name.toUpperCase(),
+            type: object.type
+        }
+    ));
 
 }
 
