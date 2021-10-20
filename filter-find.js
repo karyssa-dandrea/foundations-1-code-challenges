@@ -103,5 +103,17 @@ Output:
 */
 
 export function listNamesOfAllFruits(arr) {
-    return [];
+    
+    let names = arr.filter(Object => {
+        
+        return Object.category === 'fruit';
+    });
+    let fruitNames = [];
+    names.forEach(Object => {
+        fruitNames.push(Object.id);
+    });
+    return fruitNames;
+    //names = names.map(name => name.id);
+    //console.log(names);
+    //return names;
 }
